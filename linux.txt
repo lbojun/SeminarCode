@@ -1,0 +1,9 @@
+查看当前文件夹目录        ls
+切换工作目录              cd 路径
+返回上一级目录            cd ..
+
+激活本项目环境            conda activate cp
+查看环境安装的包          pip list
+查看gpu状态和进程PID      nvidia-smi
+根据PID查看UID            ps -f -p PID号
+

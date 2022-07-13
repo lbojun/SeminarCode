@@ -1,0 +1,1310 @@
+07/08 13:49:46: Network(
+  (entropy_bottleneck): EntropyBottleneck(
+    (_matrices): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x3 (GPU 0)]
+    )
+    (_biases): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+    (_factors): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+  )
+  (encode): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  )
+  (decode): Sequential(
+    (0): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): ConvTranspose2d(128, 3, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+  )
+)
+07/08 13:49:46: Random initialization.
+07/08 13:49:47: ========================================
+Training Epoch: 0
+07/08 13:49:47: lmbda:0.01
+07/08 13:49:47: LR:[0.0001, 0.0001, 0.0001]
+07/08 13:49:47: Training Files length:1010
+07/08 13:59:53: ==========Train Epoch 0 Step: 158
+07/08 13:59:53: bpp: 9.9419
+07/08 13:59:53: mse: 0.0156
+07/08 13:59:53: sum_loss: 20.098
+07/08 14:09:55: ==========Train Epoch 0 Step: 314
+07/08 14:09:55: bpp: 9.514
+07/08 14:09:55: mse: 0.0047
+07/08 14:09:55: sum_loss: 12.5473
+07/08 14:19:58: ==========Train Epoch 0 Step: 477
+07/08 14:19:58: bpp: 9.0817
+07/08 14:19:58: mse: 0.0034
+07/08 14:19:58: sum_loss: 11.3085
+07/08 14:29:59: ==========Train Epoch 0 Step: 869
+07/08 14:29:59: bpp: 8.3478
+07/08 14:29:59: mse: 0.0025
+07/08 14:29:59: sum_loss: 9.9735
+07/08 14:32:17: ==========Train Epoch 0 Step: 1009
+07/08 14:32:17: bpp: 7.6753
+07/08 14:32:17: mse: 0.002
+07/08 14:32:17: sum_loss: 8.9457
+07/08 14:32:17: Testing Files length:1
+07/08 14:32:18: ==========Test Epoch 1 Step: 1
+07/08 14:32:18: bpp: 7.4973
+07/08 14:32:18: mse: 0.0046
+07/08 14:32:18: sum_loss: 10.4805
+07/08 14:32:18: ========================================
+Training Epoch: 1
+07/08 14:32:18: lmbda:0.01
+07/08 14:32:18: LR:[5e-05, 5e-05, 5e-05]
+07/08 14:32:18: Training Files length:1010
+07/08 14:42:22: ==========Train Epoch 1 Step: 1331
+07/08 14:42:22: bpp: 7.3101
+07/08 14:42:22: mse: 0.0022
+07/08 14:42:22: sum_loss: 8.7262
+07/08 14:52:23: ==========Train Epoch 1 Step: 1489
+07/08 14:52:23: bpp: 7.0237
+07/08 14:52:23: mse: 0.0017
+07/08 14:52:23: sum_loss: 8.1287
+07/08 15:02:27: ==========Train Epoch 1 Step: 1663
+07/08 15:02:27: bpp: 6.8298
+07/08 15:02:27: mse: 0.0016
+07/08 15:02:27: sum_loss: 7.8697
+07/08 15:12:28: ==========Train Epoch 1 Step: 1834
+07/08 15:12:28: bpp: 6.6313
+07/08 15:12:28: mse: 0.0015
+07/08 15:12:28: sum_loss: 7.6256
+07/08 15:22:34: ==========Train Epoch 1 Step: 1999
+07/08 15:22:34: bpp: 6.4391
+07/08 15:22:34: mse: 0.0014
+07/08 15:22:34: sum_loss: 7.374
+07/08 15:23:28: ==========Train Epoch 1 Step: 2019
+07/08 15:23:28: bpp: 6.3339
+07/08 15:23:28: mse: 0.0014
+07/08 15:23:28: sum_loss: 7.2287
+07/08 15:23:28: Testing Files length:1
+07/08 15:23:28: ==========Test Epoch 2 Step: 2
+07/08 15:23:28: bpp: 6.3263
+07/08 15:23:28: mse: 0.0037
+07/08 15:23:28: sum_loss: 8.758
+07/08 15:23:28: ========================================
+Training Epoch: 2
+07/08 15:23:28: lmbda:0.01
+07/08 15:23:28: LR:[2.5e-05, 2.5e-05, 2.5e-05]
+07/08 15:23:28: Training Files length:1010
+07/08 15:33:28: ==========Train Epoch 2 Step: 2406
+07/08 15:33:28: bpp: 6.2125
+07/08 15:33:28: mse: 0.0014
+07/08 15:33:28: sum_loss: 7.1169
+07/08 15:43:34: ==========Train Epoch 2 Step: 2720
+07/08 15:43:34: bpp: 6.0131
+07/08 15:43:34: mse: 0.0013
+07/08 15:43:34: sum_loss: 6.8313
+07/08 15:53:39: ==========Train Epoch 2 Step: 2889
+07/08 15:53:39: bpp: 5.8771
+07/08 15:53:39: mse: 0.0012
+07/08 15:53:39: sum_loss: 6.6498
+07/08 16:01:39: ==========Train Epoch 2 Step: 3029
+07/08 16:01:39: bpp: 5.7917
+07/08 16:01:39: mse: 0.0012
+07/08 16:01:39: sum_loss: 6.5428
+07/08 16:01:39: Testing Files length:1
+07/08 16:01:40: ==========Test Epoch 3 Step: 3
+07/08 16:01:40: bpp: 5.7702
+07/08 16:01:40: mse: 0.0032
+07/08 16:01:40: sum_loss: 7.8417
+07/08 16:01:40: ========================================
+Training Epoch: 3
+07/08 16:01:40: lmbda:0.01
+07/08 16:01:40: LR:[1.2e-05, 1.2e-05, 1.2e-05]
+07/08 16:01:40: Training Files length:1010
+07/08 16:11:41: ==========Train Epoch 3 Step: 3224
+07/08 16:11:41: bpp: 5.7274
+07/08 16:11:41: mse: 0.0011
+07/08 16:11:41: sum_loss: 6.4637
+07/08 16:21:46: ==========Train Epoch 3 Step: 3407
+07/08 16:21:46: bpp: 5.6748
+07/08 16:21:46: mse: 0.0011
+07/08 16:21:46: sum_loss: 6.3901
+07/08 16:31:46: ==========Train Epoch 3 Step: 3777
+07/08 16:31:46: bpp: 5.5991
+07/08 16:31:46: mse: 0.0011
+07/08 16:31:46: sum_loss: 6.295
+07/08 16:35:59: ==========Train Epoch 3 Step: 4039
+07/08 16:35:59: bpp: 5.5129
+07/08 16:35:59: mse: 0.001
+07/08 16:35:59: sum_loss: 6.1803
+07/08 16:35:59: Testing Files length:1
+07/08 16:35:59: ==========Test Epoch 4 Step: 4
+07/08 16:35:59: bpp: 5.5037
+07/08 16:35:59: mse: 0.0029
+07/08 16:35:59: sum_loss: 7.4217
+07/08 16:35:59: ========================================
+Training Epoch: 4
+07/08 16:35:59: lmbda:0.01
+07/08 16:35:59: LR:[1e-05, 1e-05, 1e-05]
+07/08 16:35:59: Training Files length:1010
+07/08 16:46:01: ==========Train Epoch 4 Step: 4267
+07/08 16:46:01: bpp: 5.4542
+07/08 16:46:01: mse: 0.001
+07/08 16:46:01: sum_loss: 6.1238
+07/08 16:56:11: ==========Train Epoch 4 Step: 4416
+07/08 16:56:11: bpp: 5.4144
+07/08 16:56:11: mse: 0.001
+07/08 16:56:11: sum_loss: 6.0707
+07/08 17:06:16: ==========Train Epoch 4 Step: 4608
+07/08 17:06:16: bpp: 5.3772
+07/08 17:06:16: mse: 0.001
+07/08 17:06:16: sum_loss: 6.0227
+07/08 17:16:18: ==========Train Epoch 4 Step: 4748
+07/08 17:16:18: bpp: 5.3414
+07/08 17:16:18: mse: 0.001
+07/08 17:16:18: sum_loss: 5.9803
+07/08 17:26:21: ==========Train Epoch 4 Step: 4906
+07/08 17:26:21: bpp: 5.309
+07/08 17:26:21: mse: 0.001
+07/08 17:26:21: sum_loss: 5.9377
+07/08 17:29:33: ==========Train Epoch 4 Step: 5049
+07/08 17:29:33: bpp: 5.2771
+07/08 17:29:33: mse: 0.001
+07/08 17:29:33: sum_loss: 5.8964
+07/08 17:29:33: Testing Files length:1
+07/08 17:29:33: ==========Test Epoch 5 Step: 5
+07/08 17:29:33: bpp: 5.2966
+07/08 17:29:33: mse: 0.0028
+07/08 17:29:33: sum_loss: 7.1236
+07/08 17:29:33: ========================================
+Training Epoch: 5
+07/08 17:29:33: lmbda:0.01
+07/08 17:29:33: LR:[1e-05, 1e-05, 1e-05]
+07/08 17:29:33: Training Files length:1010
+07/08 17:39:42: ==========Train Epoch 5 Step: 5534
+07/08 17:39:42: bpp: 5.2109
+07/08 17:39:42: mse: 0.0009
+07/08 17:39:42: sum_loss: 5.8246
+07/08 17:49:42: ==========Train Epoch 5 Step: 5708
+07/08 17:49:42: bpp: 5.1425
+07/08 17:49:42: mse: 0.0009
+07/08 17:49:42: sum_loss: 5.7535
+07/08 17:59:45: ==========Train Epoch 5 Step: 5891
+07/08 17:59:45: bpp: 5.1051
+07/08 17:59:45: mse: 0.0009
+07/08 17:59:45: sum_loss: 5.7169
+07/08 18:08:09: ==========Train Epoch 5 Step: 6059
+07/08 18:08:09: bpp: 5.0683
+07/08 18:08:09: mse: 0.0009
+07/08 18:08:09: sum_loss: 5.6655
+07/08 18:08:09: Testing Files length:1
+07/08 18:08:10: ==========Test Epoch 6 Step: 6
+07/08 18:08:10: bpp: 5.0921
+07/08 18:08:10: mse: 0.0027
+07/08 18:08:10: sum_loss: 6.8397
+07/08 18:08:10: ========================================
+Training Epoch: 6
+07/08 18:08:10: lmbda:0.01
+07/08 18:08:10: LR:[1e-05, 1e-05, 1e-05]
+07/08 18:08:10: Training Files length:1010
+07/08 18:18:12: ==========Train Epoch 6 Step: 6229
+07/08 18:18:12: bpp: 5.0334
+07/08 18:18:12: mse: 0.0009
+07/08 18:18:12: sum_loss: 5.6367
+07/08 18:28:12: ==========Train Epoch 6 Step: 6479
+07/08 18:28:12: bpp: 4.9892
+07/08 18:28:12: mse: 0.0009
+07/08 18:28:12: sum_loss: 5.573
+07/08 18:38:17: ==========Train Epoch 6 Step: 7026
+07/08 18:38:17: bpp: 4.9075
+07/08 18:38:17: mse: 0.0009
+07/08 18:38:17: sum_loss: 5.4847
+07/08 18:39:40: ==========Train Epoch 6 Step: 7069
+07/08 18:39:40: bpp: 4.8457
+07/08 18:39:40: mse: 0.0009
+07/08 18:39:40: sum_loss: 5.415
+07/08 18:39:40: Testing Files length:1
+07/08 18:39:41: ==========Test Epoch 7 Step: 7
+07/08 18:39:41: bpp: 4.893
+07/08 18:39:41: mse: 0.0026
+07/08 18:39:41: sum_loss: 6.5698
+07/08 18:39:41: ========================================
+Training Epoch: 7
+07/08 18:39:41: lmbda:0.01
+07/08 18:39:41: LR:[1e-05, 1e-05, 1e-05]
+07/08 18:39:41: Training Files length:1010
+07/08 18:49:41: ==========Train Epoch 7 Step: 7228
+07/08 18:49:41: bpp: 4.8259
+07/08 18:49:41: mse: 0.0009
+07/08 18:49:41: sum_loss: 5.3944
+07/08 18:59:44: ==========Train Epoch 7 Step: 7408
+07/08 18:59:44: bpp: 4.7919
+07/08 18:59:44: mse: 0.0009
+07/08 18:59:44: sum_loss: 5.3598
+07/08 19:09:48: ==========Train Epoch 7 Step: 7617
+07/08 19:09:48: bpp: 4.7511
+07/08 19:09:48: mse: 0.0009
+07/08 19:09:48: sum_loss: 5.3111
+07/08 19:19:51: ==========Train Epoch 7 Step: 7816
+07/08 19:19:51: bpp: 4.7104
+07/08 19:19:51: mse: 0.0009
+07/08 19:19:51: sum_loss: 5.2687
+07/08 19:28:27: ==========Train Epoch 7 Step: 8079
+07/08 19:28:27: bpp: 4.6636
+07/08 19:28:27: mse: 0.0008
+07/08 19:28:27: sum_loss: 5.2156
+07/08 19:28:27: Testing Files length:1
+07/08 19:28:28: ==========Test Epoch 8 Step: 8
+07/08 19:28:28: bpp: 4.6971
+07/08 19:28:28: mse: 0.0025
+07/08 19:28:28: sum_loss: 6.3129
+07/08 19:28:28: ========================================
+Training Epoch: 8
+07/08 19:28:28: lmbda:0.01
+07/08 19:28:28: LR:[1e-05, 1e-05, 1e-05]
+07/08 19:28:28: Training Files length:1010
+07/08 19:38:38: ==========Train Epoch 8 Step: 8626
+07/08 19:38:38: bpp: 4.5825
+07/08 19:38:38: mse: 0.0008
+07/08 19:38:38: sum_loss: 5.1299
+07/08 19:48:39: ==========Train Epoch 8 Step: 8804
+07/08 19:48:39: bpp: 4.5105
+07/08 19:48:39: mse: 0.0008
+07/08 19:48:39: sum_loss: 5.0496
+07/08 19:58:39: ==========Train Epoch 8 Step: 8958
+07/08 19:58:39: bpp: 4.4768
+07/08 19:58:39: mse: 0.0008
+07/08 19:58:39: sum_loss: 5.011
+07/08 20:04:22: ==========Train Epoch 8 Step: 9089
+07/08 20:04:22: bpp: 4.4479
+07/08 20:04:22: mse: 0.0008
+07/08 20:04:22: sum_loss: 4.9756
+07/08 20:04:22: Testing Files length:1
+07/08 20:04:23: ==========Test Epoch 9 Step: 9
+07/08 20:04:23: bpp: 4.5067
+07/08 20:04:23: mse: 0.0024
+07/08 20:04:23: sum_loss: 6.0754
+07/08 20:04:23: ========================================
+Training Epoch: 9
+07/08 20:04:23: lmbda:0.01
+07/08 20:04:23: LR:[1e-05, 1e-05, 1e-05]
+07/08 20:04:23: Training Files length:1010
+07/08 20:14:37: ==========Train Epoch 9 Step: 9267
+07/08 20:14:37: bpp: 4.4194
+07/08 20:14:37: mse: 0.0008
+07/08 20:14:37: sum_loss: 4.9609
+07/08 20:24:45: ==========Train Epoch 9 Step: 9493
+07/08 20:24:45: bpp: 4.3796
+07/08 20:24:45: mse: 0.0008
+07/08 20:24:45: sum_loss: 4.9089
+07/08 20:34:45: ==========Train Epoch 9 Step: 10016
+07/08 20:34:45: bpp: 4.3072
+07/08 20:34:45: mse: 0.0008
+07/08 20:34:45: sum_loss: 4.8293
+07/08 20:36:05: ==========Train Epoch 9 Step: 10099
+07/08 20:36:05: bpp: 4.2477
+07/08 20:36:05: mse: 0.0008
+07/08 20:36:05: sum_loss: 4.7552
+07/08 20:36:05: Testing Files length:1
+07/08 20:36:05: ==========Test Epoch 10 Step: 10
+07/08 20:36:05: bpp: 4.3216
+07/08 20:36:05: mse: 0.0023
+07/08 20:36:05: sum_loss: 5.8438
+07/08 20:36:05: ========================================
+Training Epoch: 10
+07/08 20:36:05: lmbda:0.01
+07/08 20:36:05: LR:[1e-05, 1e-05, 1e-05]
+07/08 20:36:05: Training Files length:1010
+07/08 20:46:07: ==========Train Epoch 10 Step: 10323
+07/08 20:46:07: bpp: 4.2197
+07/08 20:46:07: mse: 0.0008
+07/08 20:46:07: sum_loss: 4.7404
+07/08 20:56:12: ==========Train Epoch 10 Step: 10481
+07/08 20:56:12: bpp: 4.1842
+07/08 20:56:12: mse: 0.0008
+07/08 20:56:12: sum_loss: 4.7064
+07/08 21:06:13: ==========Train Epoch 10 Step: 10680
+07/08 21:06:13: bpp: 4.149
+07/08 21:06:13: mse: 0.0008
+07/08 21:06:13: sum_loss: 4.6622
+07/08 21:16:20: ==========Train Epoch 10 Step: 10834
+07/08 21:16:20: bpp: 4.1155
+07/08 21:16:20: mse: 0.0008
+07/08 21:16:20: sum_loss: 4.6206
+07/08 21:26:21: ==========Train Epoch 10 Step: 11052
+07/08 21:26:21: bpp: 4.0792
+07/08 21:26:21: mse: 0.0008
+07/08 21:26:21: sum_loss: 4.5873
+07/08 21:27:52: ==========Train Epoch 10 Step: 11109
+07/08 21:27:52: bpp: 4.0549
+07/08 21:27:52: mse: 0.0008
+07/08 21:27:52: sum_loss: 4.5595
+07/08 21:27:52: Testing Files length:1
+07/08 21:27:53: ==========Test Epoch 11 Step: 11
+07/08 21:27:53: bpp: 4.1395
+07/08 21:27:53: mse: 0.0023
+07/08 21:27:53: sum_loss: 5.6155
+07/08 21:27:53: ========================================
+Training Epoch: 11
+07/08 21:27:53: lmbda:0.01
+07/08 21:27:53: LR:[1e-05, 1e-05, 1e-05]
+07/08 21:27:53: Training Files length:1010
+07/08 21:37:54: ==========Train Epoch 11 Step: 11717
+07/08 21:37:54: bpp: 3.9925
+07/08 21:37:54: mse: 0.0008
+07/08 21:37:54: sum_loss: 4.4963
+07/08 21:47:55: ==========Train Epoch 11 Step: 11943
+07/08 21:47:55: bpp: 3.9159
+07/08 21:47:55: mse: 0.0008
+07/08 21:47:55: sum_loss: 4.4175
+07/08 21:56:47: ==========Train Epoch 11 Step: 12119
+07/08 21:56:47: bpp: 3.8766
+07/08 21:56:47: mse: 0.0008
+07/08 21:56:47: sum_loss: 4.3709
+07/08 21:56:47: Testing Files length:1
+07/08 21:56:52: ==========Test Epoch 12 Step: 12
+07/08 21:56:52: bpp: 3.9621
+07/08 21:56:52: mse: 0.0022
+07/08 21:56:52: sum_loss: 5.3985
+07/08 21:56:52: ========================================
+Training Epoch: 12
+07/08 21:56:52: lmbda:0.01
+07/08 21:56:52: LR:[1e-05, 1e-05, 1e-05]
+07/08 21:56:52: Training Files length:1010
+07/08 22:07:03: ==========Train Epoch 12 Step: 12342
+07/08 22:07:03: bpp: 3.8418
+07/08 22:07:03: mse: 0.0008
+07/08 22:07:03: sum_loss: 4.342
+07/08 22:17:04: ==========Train Epoch 12 Step: 12504
+07/08 22:17:04: bpp: 3.8066
+07/08 22:17:04: mse: 0.0008
+07/08 22:17:04: sum_loss: 4.3059
+07/08 22:27:05: ==========Train Epoch 12 Step: 12704
+07/08 22:27:05: bpp: 3.7716
+07/08 22:27:05: mse: 0.0007
+07/08 22:27:05: sum_loss: 4.2585
+07/08 22:35:51: ==========Train Epoch 12 Step: 13129
+07/08 22:35:51: bpp: 3.7161
+07/08 22:35:51: mse: 0.0008
+07/08 22:35:51: sum_loss: 4.2041
+07/08 22:35:51: Testing Files length:1
+07/08 22:35:51: ==========Test Epoch 13 Step: 13
+07/08 22:35:51: bpp: 3.7886
+07/08 22:35:51: mse: 0.0022
+07/08 22:35:51: sum_loss: 5.1912
+07/08 22:35:51: ========================================
+Training Epoch: 13
+07/08 22:35:51: lmbda:0.01
+07/08 22:35:51: LR:[1e-05, 1e-05, 1e-05]
+07/08 22:35:51: Training Files length:1010
+07/08 22:45:56: ==========Train Epoch 13 Step: 13417
+07/08 22:45:56: bpp: 3.6518
+07/08 22:45:56: mse: 0.0008
+07/08 22:45:56: sum_loss: 4.1425
+07/08 22:56:03: ==========Train Epoch 13 Step: 13602
+07/08 22:56:03: bpp: 3.6109
+07/08 22:56:03: mse: 0.0007
+07/08 22:56:03: sum_loss: 4.0944
+07/08 23:06:03: ==========Train Epoch 13 Step: 13823
+07/08 23:06:03: bpp: 3.5721
+07/08 23:06:03: mse: 0.0007
+07/08 23:06:03: sum_loss: 4.0492
+07/08 23:16:04: ==========Train Epoch 13 Step: 13975
+07/08 23:16:04: bpp: 3.5404
+07/08 23:16:04: mse: 0.0007
+07/08 23:16:04: sum_loss: 4.0206
+07/08 23:24:48: ==========Train Epoch 13 Step: 14139
+07/08 23:24:48: bpp: 3.5134
+07/08 23:24:48: mse: 0.0007
+07/08 23:24:48: sum_loss: 3.9927
+07/08 23:24:48: Testing Files length:1
+07/08 23:24:50: ==========Test Epoch 14 Step: 14
+07/08 23:24:50: bpp: 3.6205
+07/08 23:24:50: mse: 0.0021
+07/08 23:24:50: sum_loss: 4.9917
+07/08 23:24:50: ========================================
+Training Epoch: 14
+07/08 23:24:50: lmbda:0.01
+07/08 23:24:50: LR:[1e-05, 1e-05, 1e-05]
+07/08 23:24:50: Training Files length:1010
+07/08 23:34:50: ==========Train Epoch 14 Step: 14535
+07/08 23:34:50: bpp: 3.4644
+07/08 23:34:50: mse: 0.0007
+07/08 23:34:50: sum_loss: 3.9439
+07/08 23:44:53: ==========Train Epoch 14 Step: 14921
+07/08 23:44:53: bpp: 3.3985
+07/08 23:44:53: mse: 0.0007
+07/08 23:44:53: sum_loss: 3.8739
+07/08 23:54:57: ==========Train Epoch 14 Step: 15083
+07/08 23:54:57: bpp: 3.3521
+07/08 23:54:57: mse: 0.0007
+07/08 23:54:57: sum_loss: 3.8213
+07/08 23:59:32: ==========Train Epoch 14 Step: 15149
+07/08 23:59:32: bpp: 3.3327
+07/08 23:59:32: mse: 0.0007
+07/08 23:59:32: sum_loss: 3.799
+07/08 23:59:32: Testing Files length:1
+07/08 23:59:33: ==========Test Epoch 15 Step: 15
+07/08 23:59:33: bpp: 3.4594
+07/08 23:59:33: mse: 0.0021
+07/08 23:59:33: sum_loss: 4.8084
+07/08 23:59:33: ========================================
+Training Epoch: 15
+07/08 23:59:33: lmbda:0.01
+07/08 23:59:33: LR:[1e-05, 1e-05, 1e-05]
+07/08 23:59:33: Training Files length:1010
+07/09 00:09:35: ==========Train Epoch 15 Step: 15344
+07/09 00:09:35: bpp: 3.3105
+07/09 00:09:35: mse: 0.0007
+07/09 00:09:35: sum_loss: 3.7854
+07/09 00:19:39: ==========Train Epoch 15 Step: 15492
+07/09 00:19:39: bpp: 3.2846
+07/09 00:19:39: mse: 0.0007
+07/09 00:19:39: sum_loss: 3.7559
+07/09 00:29:41: ==========Train Epoch 15 Step: 15691
+07/09 00:29:41: bpp: 3.2542
+07/09 00:29:41: mse: 0.0007
+07/09 00:29:41: sum_loss: 3.7192
+07/09 00:37:53: ==========Train Epoch 15 Step: 16159
+07/09 00:37:53: bpp: 3.2008
+07/09 00:37:53: mse: 0.0007
+07/09 00:37:53: sum_loss: 3.6671
+07/09 00:37:53: Testing Files length:1
+07/09 00:37:54: ==========Test Epoch 16 Step: 16
+07/09 00:37:54: bpp: 3.3037
+07/09 00:37:54: mse: 0.002
+07/09 00:37:54: sum_loss: 4.628
+07/09 00:37:54: ========================================
+Training Epoch: 16
+07/09 00:37:54: lmbda:0.01
+07/09 00:37:54: LR:[1e-05, 1e-05, 1e-05]
+07/09 00:37:54: Training Files length:1010
+07/09 00:47:56: ==========Train Epoch 16 Step: 16422
+07/09 00:47:56: bpp: 3.1413
+07/09 00:47:56: mse: 0.0007
+07/09 00:47:56: sum_loss: 3.6036
+07/09 00:58:01: ==========Train Epoch 16 Step: 16588
+07/09 00:58:01: bpp: 3.1066
+07/09 00:58:01: mse: 0.0007
+07/09 00:58:01: sum_loss: 3.5655
+07/09 01:08:01: ==========Train Epoch 16 Step: 16792
+07/09 01:08:01: bpp: 3.0786
+07/09 01:08:01: mse: 0.0007
+07/09 01:08:01: sum_loss: 3.5439
+07/09 01:18:06: ==========Train Epoch 16 Step: 16944
+07/09 01:18:06: bpp: 3.0495
+07/09 01:18:06: mse: 0.0007
+07/09 01:18:06: sum_loss: 3.5085
+07/09 01:28:09: ==========Train Epoch 16 Step: 17125
+07/09 01:28:09: bpp: 3.0237
+07/09 01:28:09: mse: 0.0007
+07/09 01:28:09: sum_loss: 3.4814
+07/09 01:30:04: ==========Train Epoch 16 Step: 17169
+07/09 01:30:04: bpp: 3.0069
+07/09 01:30:04: mse: 0.0007
+07/09 01:30:04: sum_loss: 3.4646
+07/09 01:30:04: Testing Files length:1
+07/09 01:30:05: ==========Test Epoch 17 Step: 17
+07/09 01:30:05: bpp: 3.1517
+07/09 01:30:05: mse: 0.002
+07/09 01:30:05: sum_loss: 4.4484
+07/09 01:30:05: ========================================
+Training Epoch: 17
+07/09 01:30:05: lmbda:0.01
+07/09 01:30:05: LR:[1e-05, 1e-05, 1e-05]
+07/09 01:30:05: Training Files length:1010
+07/09 01:40:20: ==========Train Epoch 17 Step: 17717
+07/09 01:40:20: bpp: 2.9612
+07/09 01:40:20: mse: 0.0007
+07/09 01:40:20: sum_loss: 3.418
+07/09 01:50:26: ==========Train Epoch 17 Step: 17898
+07/09 01:50:26: bpp: 2.9064
+07/09 01:50:26: mse: 0.0007
+07/09 01:50:26: sum_loss: 3.3581
+07/09 02:00:26: ==========Train Epoch 17 Step: 18040
+07/09 02:00:26: bpp: 2.8808
+07/09 02:00:26: mse: 0.0007
+07/09 02:00:26: sum_loss: 3.3281
+07/09 02:08:14: ==========Train Epoch 17 Step: 18179
+07/09 02:08:14: bpp: 2.8639
+07/09 02:08:14: mse: 0.0007
+07/09 02:08:14: sum_loss: 3.319
+07/09 02:08:14: Testing Files length:1
+07/09 02:08:18: ==========Test Epoch 18 Step: 18
+07/09 02:08:18: bpp: 3.0086
+07/09 02:08:18: mse: 0.002
+07/09 02:08:18: sum_loss: 4.2848
+07/09 02:08:18: ========================================
+Training Epoch: 18
+07/09 02:08:18: lmbda:0.01
+07/09 02:08:18: LR:[1e-05, 1e-05, 1e-05]
+07/09 02:08:18: Training Files length:1010
+07/09 02:18:23: ==========Train Epoch 18 Step: 18286
+07/09 02:18:23: bpp: 2.8434
+07/09 02:18:23: mse: 0.0007
+07/09 02:18:23: sum_loss: 3.3045
+07/09 02:28:27: ==========Train Epoch 18 Step: 18451
+07/09 02:28:27: bpp: 2.8243
+07/09 02:28:27: mse: 0.0007
+07/09 02:28:27: sum_loss: 3.2733
+07/09 02:38:47: ==========Train Epoch 18 Step: 18977
+07/09 02:38:47: bpp: 2.7731
+07/09 02:38:47: mse: 0.0007
+07/09 02:38:47: sum_loss: 3.2196
+07/09 02:48:50: ==========Train Epoch 18 Step: 19180
+07/09 02:48:50: bpp: 2.7246
+07/09 02:48:50: mse: 0.0007
+07/09 02:48:50: sum_loss: 3.1772
+07/09 02:49:27: ==========Train Epoch 18 Step: 19189
+07/09 02:49:27: bpp: 2.7029
+07/09 02:49:27: mse: 0.0007
+07/09 02:49:27: sum_loss: 3.1338
+07/09 02:49:27: Testing Files length:1
+07/09 02:49:28: ==========Test Epoch 19 Step: 19
+07/09 02:49:28: bpp: 2.872
+07/09 02:49:28: mse: 0.0019
+07/09 02:49:28: sum_loss: 4.1304
+07/09 02:49:28: ========================================
+Training Epoch: 19
+07/09 02:49:28: lmbda:0.01
+07/09 02:49:28: LR:[1e-05, 1e-05, 1e-05]
+07/09 02:49:28: Training Files length:1010
+07/09 02:59:32: ==========Train Epoch 19 Step: 19333
+07/09 02:59:32: bpp: 2.6965
+07/09 02:59:32: mse: 0.0007
+07/09 02:59:32: sum_loss: 3.146
+07/09 03:09:39: ==========Train Epoch 19 Step: 19531
+07/09 03:09:39: bpp: 2.6731
+07/09 03:09:39: mse: 0.0007
+07/09 03:09:39: sum_loss: 3.1204
+07/09 03:19:45: ==========Train Epoch 19 Step: 19719
+07/09 03:19:45: bpp: 2.6456
+07/09 03:19:45: mse: 0.0007
+07/09 03:19:45: sum_loss: 3.0892
+07/09 03:29:46: ==========Train Epoch 19 Step: 19975
+07/09 03:29:46: bpp: 2.616
+07/09 03:29:46: mse: 0.0007
+07/09 03:29:46: sum_loss: 3.0624
+07/09 03:33:19: ==========Train Epoch 19 Step: 20199
+07/09 03:33:19: bpp: 2.5817
+07/09 03:33:19: mse: 0.0007
+07/09 03:33:19: sum_loss: 3.0242
+07/09 03:33:19: Testing Files length:1
+07/09 03:33:20: ==========Test Epoch 20 Step: 20
+07/09 03:33:20: bpp: 2.7401
+07/09 03:33:20: mse: 0.0019
+07/09 03:33:20: sum_loss: 3.9825
+07/09 03:33:20: ========================================
+Training Epoch: 20
+07/09 03:33:20: lmbda:0.01
+07/09 03:33:20: LR:[1e-05, 1e-05, 1e-05]
+07/09 03:33:20: Training Files length:1010
+07/09 03:43:20: ==========Train Epoch 20 Step: 20589
+07/09 03:43:20: bpp: 2.5406
+07/09 03:43:20: mse: 0.0007
+07/09 03:43:20: sum_loss: 2.9816
+07/09 03:53:28: ==========Train Epoch 20 Step: 20759
+07/09 03:53:28: bpp: 2.5064
+07/09 03:53:28: mse: 0.0007
+07/09 03:53:28: sum_loss: 2.954
+07/09 04:03:28: ==========Train Epoch 20 Step: 20921
+07/09 04:03:28: bpp: 2.4834
+07/09 04:03:28: mse: 0.0007
+07/09 04:03:28: sum_loss: 2.9273
+07/09 04:13:28: ==========Train Epoch 20 Step: 21083
+07/09 04:13:28: bpp: 2.4592
+07/09 04:13:28: mse: 0.0007
+07/09 04:13:28: sum_loss: 2.8964
+07/09 04:20:16: ==========Train Epoch 20 Step: 21209
+07/09 04:20:16: bpp: 2.4429
+07/09 04:20:16: mse: 0.0007
+07/09 04:20:16: sum_loss: 2.8819
+07/09 04:20:16: Testing Files length:1
+07/09 04:20:16: ==========Test Epoch 21 Step: 21
+07/09 04:20:16: bpp: 2.6136
+07/09 04:20:16: mse: 0.0019
+07/09 04:20:16: sum_loss: 3.8407
+07/09 04:20:16: ========================================
+Training Epoch: 21
+07/09 04:20:16: lmbda:0.01
+07/09 04:20:16: LR:[1e-05, 1e-05, 1e-05]
+07/09 04:20:16: Training Files length:1010
+07/09 04:30:16: ==========Train Epoch 21 Step: 21438
+07/09 04:30:16: bpp: 2.4221
+07/09 04:30:16: mse: 0.0007
+07/09 04:30:16: sum_loss: 2.8715
+07/09 04:40:19: ==========Train Epoch 21 Step: 21982
+07/09 04:40:19: bpp: 2.3713
+07/09 04:40:19: mse: 0.0007
+07/09 04:40:19: sum_loss: 2.8089
+07/09 04:50:20: ==========Train Epoch 21 Step: 22175
+07/09 04:50:20: bpp: 2.322
+07/09 04:50:20: mse: 0.0007
+07/09 04:50:20: sum_loss: 2.7486
+07/09 04:53:20: ==========Train Epoch 21 Step: 22219
+07/09 04:53:20: bpp: 2.3135
+07/09 04:53:20: mse: 0.0007
+07/09 04:53:20: sum_loss: 2.7571
+07/09 04:53:20: Testing Files length:1
+07/09 04:53:25: ==========Test Epoch 22 Step: 22
+07/09 04:53:25: bpp: 2.4947
+07/09 04:53:25: mse: 0.0019
+07/09 04:53:25: sum_loss: 3.7103
+07/09 04:53:25: ========================================
+Training Epoch: 22
+07/09 04:53:25: lmbda:0.01
+07/09 04:53:25: LR:[1e-05, 1e-05, 1e-05]
+07/09 04:53:25: Training Files length:1010
+07/09 05:03:31: ==========Train Epoch 22 Step: 22415
+07/09 05:03:31: bpp: 2.2968
+07/09 05:03:31: mse: 0.0007
+07/09 05:03:31: sum_loss: 2.7333
+07/09 05:13:32: ==========Train Epoch 22 Step: 22583
+07/09 05:13:32: bpp: 2.2756
+07/09 05:13:32: mse: 0.0007
+07/09 05:13:32: sum_loss: 2.7133
+07/09 05:23:33: ==========Train Epoch 22 Step: 22760
+07/09 05:23:33: bpp: 2.2524
+07/09 05:23:33: mse: 0.0007
+07/09 05:23:33: sum_loss: 2.6855
+07/09 05:33:34: ==========Train Epoch 22 Step: 23098
+07/09 05:33:34: bpp: 2.2216
+07/09 05:33:34: mse: 0.0007
+07/09 05:33:34: sum_loss: 2.654
+07/09 05:35:39: ==========Train Epoch 22 Step: 23229
+07/09 05:35:39: bpp: 2.1979
+07/09 05:35:39: mse: 0.0007
+07/09 05:35:39: sum_loss: 2.6345
+07/09 05:35:39: Testing Files length:1
+07/09 05:35:39: ==========Test Epoch 23 Step: 23
+07/09 05:35:39: bpp: 2.3781
+07/09 05:35:39: mse: 0.0019
+07/09 05:35:39: sum_loss: 3.5813
+07/09 05:35:39: ========================================
+Training Epoch: 23
+07/09 05:35:39: lmbda:0.01
+07/09 05:35:39: LR:[1e-05, 1e-05, 1e-05]
+07/09 05:35:39: Training Files length:1010
+07/09 05:45:39: ==========Train Epoch 23 Step: 23640
+07/09 05:45:39: bpp: 2.164
+07/09 05:45:39: mse: 0.0007
+07/09 05:45:39: sum_loss: 2.6
+07/09 05:55:44: ==========Train Epoch 23 Step: 23796
+07/09 05:55:44: bpp: 2.1311
+07/09 05:55:44: mse: 0.0007
+07/09 05:55:44: sum_loss: 2.5611
+07/09 06:05:49: ==========Train Epoch 23 Step: 23948
+07/09 06:05:49: bpp: 2.1129
+07/09 06:05:49: mse: 0.0007
+07/09 06:05:49: sum_loss: 2.5388
+07/09 06:15:50: ==========Train Epoch 23 Step: 24090
+07/09 06:15:50: bpp: 2.0982
+07/09 06:15:50: mse: 0.0007
+07/09 06:15:50: sum_loss: 2.5284
+07/09 06:25:58: ==========Train Epoch 23 Step: 24230
+07/09 06:25:58: bpp: 2.0826
+07/09 06:25:58: mse: 0.0007
+07/09 06:25:58: sum_loss: 2.5126
+07/09 06:26:40: ==========Train Epoch 23 Step: 24239
+07/09 06:26:40: bpp: 2.07
+07/09 06:26:40: mse: 0.0007
+07/09 06:26:40: sum_loss: 2.4947
+07/09 06:26:40: Testing Files length:1
+07/09 06:26:41: ==========Test Epoch 24 Step: 24
+07/09 06:26:41: bpp: 2.269
+07/09 06:26:41: mse: 0.0018
+07/09 06:26:41: sum_loss: 3.4647
+07/09 06:26:41: ========================================
+Training Epoch: 24
+07/09 06:26:41: lmbda:0.01
+07/09 06:26:41: LR:[1e-05, 1e-05, 1e-05]
+07/09 06:26:41: Training Files length:1010
+07/09 06:36:41: ==========Train Epoch 24 Step: 24596
+07/09 06:36:41: bpp: 2.053
+07/09 06:36:41: mse: 0.0007
+07/09 06:36:41: sum_loss: 2.4799
+07/09 06:46:42: ==========Train Epoch 24 Step: 24982
+07/09 06:46:42: bpp: 2.0145
+07/09 06:46:42: mse: 0.0007
+07/09 06:46:42: sum_loss: 2.4429
+07/09 06:47:31: factorized(
+  (entropy_bottleneck): EntropyBottleneck(
+    (_matrices): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x3 (GPU 0)]
+    )
+    (_biases): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+    (_factors): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+  )
+  (encode): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  )
+  (decode): Sequential(
+    (0): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): ConvTranspose2d(128, 3, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+  )
+)
+07/09 06:47:31: Random initialization.
+07/09 06:47:31: ========================================
+Training Epoch: 0
+07/09 06:47:31: lmbda:0.01
+07/09 06:47:31: LR:[0.0001, 0.0001, 0.0001]
+07/09 06:47:31: Training Files length:1010
+07/09 06:48:24: factorized(
+  (entropy_bottleneck): EntropyBottleneck(
+    (_matrices): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x3 (GPU 0)]
+    )
+    (_biases): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+    (_factors): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+  )
+  (encode): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  )
+  (decode): Sequential(
+    (0): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): ConvTranspose2d(128, 3, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+  )
+)
+07/09 06:48:24: Random initialization.
+07/09 06:48:24: ========================================
+Training Epoch: 0
+07/09 06:48:24: lmbda:0.01
+07/09 06:48:24: LR:[0.0001, 0.0001, 0.0001]
+07/09 06:48:24: Training Files length:1010
+07/09 06:49:59: factorized(
+  (entropy_bottleneck): EntropyBottleneck(
+    (_matrices): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x3 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x3 (GPU 0)]
+    )
+    (_biases): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+    (_factors): ParameterList(
+        (0): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (1): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (2): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (3): Parameter containing: [torch.cuda.FloatTensor of size 128x3x1 (GPU 0)]
+        (4): Parameter containing: [torch.cuda.FloatTensor of size 128x1x1 (GPU 0)]
+    )
+  )
+  (encode): Sequential(
+    (0): Conv2d(3, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): Conv2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+  )
+  (decode): Sequential(
+    (0): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (1): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (2): ConvTranspose2d(128, 128, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+    (3): GDN(
+      (beta_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+      (gamma_reparam): NonNegativeParametrizer(
+        (lower_bound): LowerBound()
+      )
+    )
+    (4): ConvTranspose2d(128, 3, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+  )
+)
+07/09 06:49:59: Random initialization.
+07/09 06:49:59: ========================================
+Training Epoch: 0
+07/09 06:49:59: lmbda:0.01
+07/09 06:49:59: LR:[0.0001, 0.0001, 0.0001]
+07/09 06:49:59: Training Files length:1010
+07/09 06:56:46: ==========Train Epoch 24 Step: 25101
+07/09 06:56:46: bpp: 1.9866
+07/09 06:56:46: mse: 0.0007
+07/09 06:56:46: sum_loss: 2.4148
+07/09 07:06:48: ==========Train Epoch 24 Step: 25210
+07/09 07:06:48: bpp: 1.9768
+07/09 07:06:48: mse: 0.0007
+07/09 07:06:48: sum_loss: 2.4072
+07/09 07:09:20: ==========Train Epoch 24 Step: 25249
+07/09 07:09:20: bpp: 1.9658
+07/09 07:09:20: mse: 0.0006
+07/09 07:09:20: sum_loss: 2.3869
+07/09 07:09:20: Testing Files length:1
+07/09 07:09:20: ==========Test Epoch 25 Step: 25
+07/09 07:09:20: bpp: 2.1648
+07/09 07:09:20: mse: 0.0018
+07/09 07:09:20: sum_loss: 3.3492
+07/09 07:09:20: ========================================
+Training Epoch: 25
+07/09 07:09:20: lmbda:0.01
+07/09 07:09:20: LR:[1e-05, 1e-05, 1e-05]
+07/09 07:09:20: Training Files length:1010
+07/09 07:19:21: ==========Train Epoch 25 Step: 25391
+07/09 07:19:21: bpp: 1.9593
+07/09 07:19:21: mse: 0.0007
+07/09 07:19:21: sum_loss: 2.3889
+07/09 07:29:27: ==========Train Epoch 25 Step: 25542
+07/09 07:29:27: bpp: 1.9433
+07/09 07:29:27: mse: 0.0007
+07/09 07:29:27: sum_loss: 2.3687
+07/09 07:39:27: ==========Train Epoch 25 Step: 25823
+07/09 07:39:27: bpp: 1.921
+07/09 07:39:27: mse: 0.0007
+07/09 07:39:27: sum_loss: 2.3456
+07/09 07:48:29: ==========Train Epoch 25 Step: 26259
+07/09 07:48:29: bpp: 1.886
+07/09 07:48:29: mse: 0.0007
+07/09 07:48:29: sum_loss: 2.3092
+07/09 07:48:29: Testing Files length:1
+07/09 07:48:29: ==========Test Epoch 26 Step: 26
+07/09 07:48:29: bpp: 2.0685
+07/09 07:48:29: mse: 0.0018
+07/09 07:48:29: sum_loss: 3.2483
+07/09 07:48:29: ========================================
+Training Epoch: 26
+07/09 07:48:29: lmbda:0.01
+07/09 07:48:29: LR:[1e-05, 1e-05, 1e-05]
+07/09 07:48:29: Training Files length:1010
+07/09 07:58:30: ==========Train Epoch 26 Step: 26445
+07/09 07:58:30: bpp: 1.8554
+07/09 07:58:30: mse: 0.0007
+07/09 07:58:30: sum_loss: 2.2819
+07/09 08:08:35: ==========Train Epoch 26 Step: 26568
+07/09 08:08:35: bpp: 1.8403
+07/09 08:08:35: mse: 0.0006
+07/09 08:08:35: sum_loss: 2.2621
+07/09 08:18:38: ==========Train Epoch 26 Step: 26692
+07/09 08:18:38: bpp: 1.8311
+07/09 08:18:38: mse: 0.0007
+07/09 08:18:38: sum_loss: 2.2583
+07/09 08:28:41: ==========Train Epoch 26 Step: 26803
+07/09 08:28:41: bpp: 1.8182
+07/09 08:28:41: mse: 0.0007
+07/09 08:28:41: sum_loss: 2.2411
+07/09 08:38:44: ==========Train Epoch 26 Step: 26969
+07/09 08:38:44: bpp: 1.804
+07/09 08:38:44: mse: 0.0006
+07/09 08:38:44: sum_loss: 2.2237
+07/09 08:45:56: ==========Train Epoch 26 Step: 27269
+07/09 08:45:56: bpp: 1.7818
+07/09 08:45:56: mse: 0.0006
+07/09 08:45:56: sum_loss: 2.2034
+07/09 08:45:56: Testing Files length:1
+07/09 08:45:56: ==========Test Epoch 27 Step: 27
+07/09 08:45:56: bpp: 1.9773
+07/09 08:45:56: mse: 0.0018
+07/09 08:45:56: sum_loss: 3.1516
+07/09 08:45:56: ========================================
+Training Epoch: 27
+07/09 08:45:56: lmbda:0.01
+07/09 08:45:56: LR:[1e-05, 1e-05, 1e-05]
+07/09 08:45:56: Training Files length:1010
+07/09 08:56:06: ==========Train Epoch 27 Step: 27648
+07/09 08:56:06: bpp: 1.7532
+07/09 08:56:06: mse: 0.0007
+07/09 08:56:06: sum_loss: 2.1802
+07/09 09:06:14: ==========Train Epoch 27 Step: 27799
+07/09 09:06:14: bpp: 1.7261
+07/09 09:06:14: mse: 0.0006
+07/09 09:06:14: sum_loss: 2.1427
+07/09 09:16:14: ==========Train Epoch 27 Step: 27956
+07/09 09:16:14: bpp: 1.7147
+07/09 09:16:14: mse: 0.0006
+07/09 09:16:14: sum_loss: 2.1358
+07/09 09:26:23: ==========Train Epoch 27 Step: 28084
+07/09 09:26:23: bpp: 1.6995
+07/09 09:26:23: mse: 0.0006
+07/09 09:26:23: sum_loss: 2.1146
+07/09 09:36:24: ==========Train Epoch 27 Step: 28218
+07/09 09:36:24: bpp: 1.6897
+07/09 09:36:24: mse: 0.0006
+07/09 09:36:24: sum_loss: 2.1077
+07/09 09:39:18: ==========Train Epoch 27 Step: 28279
+07/09 09:39:18: bpp: 1.6802
+07/09 09:39:18: mse: 0.0006
+07/09 09:39:18: sum_loss: 2.0967
+07/09 09:39:18: Testing Files length:1
+07/09 09:39:19: ==========Test Epoch 28 Step: 28
+07/09 09:39:19: bpp: 1.8906
+07/09 09:39:19: mse: 0.0018
+07/09 09:39:19: sum_loss: 3.0634
+07/09 09:39:19: ========================================
+Training Epoch: 28
+07/09 09:39:19: lmbda:0.01
+07/09 09:39:19: LR:[1e-05, 1e-05, 1e-05]
+07/09 09:39:19: Training Files length:1010
+07/09 09:49:19: ==========Train Epoch 28 Step: 28813
+07/09 09:49:19: bpp: 1.6564
+07/09 09:49:19: mse: 0.0006
+07/09 09:49:19: sum_loss: 2.0776
+07/09 09:59:21: ==========Train Epoch 28 Step: 29046
+07/09 09:59:21: bpp: 1.6236
+07/09 09:59:21: mse: 0.0006
+07/09 09:59:21: sum_loss: 2.0415
+07/09 10:09:23: ==========Train Epoch 28 Step: 29219
+07/09 10:09:23: bpp: 1.6075
+07/09 10:09:23: mse: 0.0006
+07/09 10:09:23: sum_loss: 2.0255
+07/09 10:13:45: ==========Train Epoch 28 Step: 29289
+07/09 10:13:45: bpp: 1.5962
+07/09 10:13:45: mse: 0.0006
+07/09 10:13:45: sum_loss: 2.0148
+07/09 10:13:45: Testing Files length:1
+07/09 10:13:48: ==========Test Epoch 29 Step: 29
+07/09 10:13:48: bpp: 1.809
+07/09 10:13:48: mse: 0.0018
+07/09 10:13:48: sum_loss: 2.9789
+07/09 10:13:48: ========================================
+Training Epoch: 29
+07/09 10:13:48: lmbda:0.01
+07/09 10:13:48: LR:[1e-05, 1e-05, 1e-05]
+07/09 10:13:48: Training Files length:1010
+07/09 10:23:50: ==========Train Epoch 29 Step: 29480
+07/09 10:23:50: bpp: 1.5875
+07/09 10:23:50: mse: 0.0006
+07/09 10:23:50: sum_loss: 2.0098
+07/09 10:33:51: ==========Train Epoch 29 Step: 29632
+07/09 10:33:51: bpp: 1.5727
+07/09 10:33:51: mse: 0.0006
+07/09 10:33:51: sum_loss: 1.9896
+07/09 10:43:51: ==========Train Epoch 29 Step: 29844
+07/09 10:43:51: bpp: 1.5591
+07/09 10:43:51: mse: 0.0006
+07/09 10:43:51: sum_loss: 1.978
+07/09 10:50:59: ==========Train Epoch 29 Step: 30299
+07/09 10:50:59: bpp: 1.5311
+07/09 10:50:59: mse: 0.0006
+07/09 10:50:59: sum_loss: 1.9481
+07/09 10:50:59: Testing Files length:1
+07/09 10:51:00: ==========Test Epoch 30 Step: 30
+07/09 10:51:00: bpp: 1.7313
+07/09 10:51:00: mse: 0.0018
+07/09 10:51:00: sum_loss: 2.9055
+07/09 10:51:00: ========================================
+Training Epoch: 30
+07/09 10:51:00: lmbda:0.01
+07/09 10:51:00: LR:[1e-05, 1e-05, 1e-05]
+07/09 10:51:00: Training Files length:1010
+07/09 11:01:00: ==========Train Epoch 30 Step: 30574
+07/09 11:01:00: bpp: 1.5046
+07/09 11:01:00: mse: 0.0006
+07/09 11:01:00: sum_loss: 1.9255
+07/09 11:11:03: ==========Train Epoch 30 Step: 30729
+07/09 11:11:03: bpp: 1.4878
+07/09 11:11:03: mse: 0.0006
+07/09 11:11:03: sum_loss: 1.9027
+07/09 11:21:07: ==========Train Epoch 30 Step: 30921
+07/09 11:21:07: bpp: 1.4758
+07/09 11:21:07: mse: 0.0006
+07/09 11:21:07: sum_loss: 1.8935
+07/09 11:31:08: ==========Train Epoch 30 Step: 31072
+07/09 11:31:08: bpp: 1.4631
+07/09 11:31:08: mse: 0.0006
+07/09 11:31:08: sum_loss: 1.8807
+07/09 11:41:13: ==========Train Epoch 30 Step: 31270
+07/09 11:41:13: bpp: 1.4492
+07/09 11:41:13: mse: 0.0006
+07/09 11:41:13: sum_loss: 1.865
+07/09 11:43:09: ==========Train Epoch 30 Step: 31309
+07/09 11:43:09: bpp: 1.4382
+07/09 11:43:09: mse: 0.0006
+07/09 11:43:09: sum_loss: 1.8532
+07/09 11:43:09: Testing Files length:1
+07/09 11:43:10: ==========Test Epoch 31 Step: 31
+07/09 11:43:10: bpp: 1.6574
+07/09 11:43:10: mse: 0.0018
+07/09 11:43:10: sum_loss: 2.8298
+07/09 11:43:10: ========================================
+Training Epoch: 31
+07/09 11:43:10: lmbda:0.01
+07/09 11:43:10: LR:[1e-05, 1e-05, 1e-05]
+07/09 11:43:10: Training Files length:1010
+07/09 11:53:10: ==========Train Epoch 31 Step: 31857
+07/09 11:53:10: bpp: 1.4203
+07/09 11:53:10: mse: 0.0006
+07/09 11:53:10: sum_loss: 1.8355
+07/09 12:03:16: ==========Train Epoch 31 Step: 32059
+07/09 12:03:16: bpp: 1.395
+07/09 12:03:16: mse: 0.0006
+07/09 12:03:16: sum_loss: 1.8125
+07/09 12:13:16: ==========Train Epoch 31 Step: 32227
+07/09 12:13:16: bpp: 1.3827
+07/09 12:13:16: mse: 0.0006
+07/09 12:13:16: sum_loss: 1.8031
+07/09 12:19:07: ==========Train Epoch 31 Step: 32319
+07/09 12:19:07: bpp: 1.3724
+07/09 12:19:07: mse: 0.0006
+07/09 12:19:07: sum_loss: 1.7853
+07/09 12:19:07: Testing Files length:1
+07/09 12:19:10: ==========Test Epoch 32 Step: 32
+07/09 12:19:10: bpp: 1.5902
+07/09 12:19:10: mse: 0.0018
+07/09 12:19:10: sum_loss: 2.7637
+07/09 12:19:10: ========================================
+Training Epoch: 32
+07/09 12:19:10: lmbda:0.01
+07/09 12:19:10: LR:[1e-05, 1e-05, 1e-05]
+07/09 12:19:10: Training Files length:1010
+07/09 12:29:17: ==========Train Epoch 32 Step: 32463
+07/09 12:29:17: bpp: 1.3657
+07/09 12:29:17: mse: 0.0006
+07/09 12:29:17: sum_loss: 1.7836
+07/09 12:39:18: ==========Train Epoch 32 Step: 32631
+07/09 12:39:18: bpp: 1.3539
+07/09 12:39:18: mse: 0.0006
+07/09 12:39:18: sum_loss: 1.7686
+07/09 12:49:19: ==========Train Epoch 32 Step: 32963
+07/09 12:49:19: bpp: 1.3389
+07/09 12:49:19: mse: 0.0006
+07/09 12:49:19: sum_loss: 1.7542
+07/09 12:55:50: ==========Train Epoch 32 Step: 33329
+07/09 12:55:50: bpp: 1.317
+07/09 12:55:50: mse: 0.0006
+07/09 12:55:50: sum_loss: 1.7344
+07/09 12:55:50: Testing Files length:1
+07/09 12:55:50: ==========Test Epoch 33 Step: 33
+07/09 12:55:50: bpp: 1.5252
+07/09 12:55:50: mse: 0.0018
+07/09 12:55:50: sum_loss: 2.7006
+07/09 12:55:50: ========================================
+Training Epoch: 33
+07/09 12:55:50: lmbda:0.01
+07/09 12:55:50: LR:[1e-05, 1e-05, 1e-05]
+07/09 12:55:50: Training Files length:1010
+07/09 13:05:54: ==========Train Epoch 33 Step: 33546
+07/09 13:05:54: bpp: 1.2984
+07/09 13:05:54: mse: 0.0006
+07/09 13:05:54: sum_loss: 1.714
+07/09 13:15:57: ==========Train Epoch 33 Step: 33708
+07/09 13:15:57: bpp: 1.2856
+07/09 13:15:57: mse: 0.0006
+07/09 13:15:57: sum_loss: 1.6993
+07/09 13:25:57: ==========Train Epoch 33 Step: 33888
+07/09 13:25:57: bpp: 1.2763
+07/09 13:25:57: mse: 0.0006
+07/09 13:25:57: sum_loss: 1.6909
+07/09 13:35:58: ==========Train Epoch 33 Step: 34034
+07/09 13:35:58: bpp: 1.2688
+07/09 13:35:58: mse: 0.0006
+07/09 13:35:58: sum_loss: 1.6904
+07/09 13:45:58: ==========Train Epoch 33 Step: 34211
+07/09 13:45:58: bpp: 1.2567
+07/09 13:45:58: mse: 0.0006
+07/09 13:45:58: sum_loss: 1.6718
+07/09 13:49:58: ==========Train Epoch 33 Step: 34339
+07/09 13:49:58: bpp: 1.2476
+07/09 13:49:58: mse: 0.0006
+07/09 13:49:58: sum_loss: 1.6627
+07/09 13:49:58: Testing Files length:1
+07/09 13:49:58: ==========Test Epoch 34 Step: 34
+07/09 13:49:58: bpp: 1.4661
+07/09 13:49:58: mse: 0.0018
+07/09 13:49:58: sum_loss: 2.6454
+07/09 13:49:58: ========================================
+Training Epoch: 34
+07/09 13:49:58: lmbda:0.01
+07/09 13:49:58: LR:[1e-05, 1e-05, 1e-05]
+07/09 13:49:58: Training Files length:1010
+07/09 14:00:06: ==========Train Epoch 34 Step: 34921
+07/09 14:00:06: bpp: 1.2267
+07/09 14:00:06: mse: 0.0006
+07/09 14:00:06: sum_loss: 1.6404
+07/09 14:10:08: ==========Train Epoch 34 Step: 35109
+07/09 14:10:08: bpp: 1.2079
+07/09 14:10:08: mse: 0.0006
+07/09 14:10:08: sum_loss: 1.6268
+07/09 14:20:14: ==========Train Epoch 34 Step: 35277
+07/09 14:20:14: bpp: 1.196
+07/09 14:20:14: mse: 0.0006
+07/09 14:20:14: sum_loss: 1.6114
+07/09 14:23:19: ==========Train Epoch 34 Step: 35349
+07/09 14:23:19: bpp: 1.1898
+07/09 14:23:19: mse: 0.0006
+07/09 14:23:19: sum_loss: 1.6022
+07/09 14:23:19: Testing Files length:1
+07/09 14:23:21: ==========Test Epoch 35 Step: 35
+07/09 14:23:21: bpp: 1.4094
+07/09 14:23:21: mse: 0.0018
+07/09 14:23:21: sum_loss: 2.5896
+07/09 14:23:21: ========================================
+Training Epoch: 35
+07/09 14:23:21: lmbda:0.01
+07/09 14:23:21: LR:[1e-05, 1e-05, 1e-05]
+07/09 14:23:21: Training Files length:1010
+07/09 14:33:24: ==========Train Epoch 35 Step: 35525
+07/09 14:33:24: bpp: 1.1819
+07/09 14:33:24: mse: 0.0006
+07/09 14:33:24: sum_loss: 1.5986
+07/09 14:43:33: ==========Train Epoch 35 Step: 35664
+07/09 14:43:33: bpp: 1.1763
+07/09 14:43:33: mse: 0.0006
+07/09 14:43:33: sum_loss: 1.5937
