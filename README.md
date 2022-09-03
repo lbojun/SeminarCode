@@ -1,4 +1,3 @@
 # SeminarCode
 asdadad
-kkkk
-aaaa
+
