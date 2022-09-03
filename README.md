@@ -1,3 +1,3 @@
 # SeminarCode
-asdadadAAAAA
+aAAA
 
